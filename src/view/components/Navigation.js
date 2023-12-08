@@ -21,7 +21,7 @@ const Navigation = () => {
       </View>
       <View style={style.changeDateContainer}>
         <TouchableOpacity style={style.buttonChangeDate}>
-          <FontAwesome name={"calendar"} size="20" color="#fff" />
+          <FontAwesome name={"calendar"} fontSize="20" color="#fff" />
         </TouchableOpacity>
       </View>
     </View>
