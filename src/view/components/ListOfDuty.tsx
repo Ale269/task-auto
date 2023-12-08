@@ -1,6 +1,6 @@
 import React from "react";
 import { View, StyleSheet, Text, FlatList } from "react-native";
-import getData from "../controller/GetData";
+import getData from "../../controller/GetData";
 
 const Data = getData();
 
