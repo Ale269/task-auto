@@ -1,18 +1,16 @@
 import React from "react";
 import { View, SafeAreaView, StyleSheet, StatusBar } from "react-native";
-import Navigation from "./src/view/components/Navigation";
-import ListOfDuty from "./src/view/components/ListOfDuty";
-import NuovaTaskButton from "./src/view/components/NuovaTaskButton";
+import Navigation from "./../components/Navigation";
+import NuovaTaskButton from "./../components/NuovaTaskButton";
 
-const App = () => {
+// Questa pagina serve come template standard da utilizzare nelle altre pagine dell'applicazione
+const BasePageLayout = ({ children }) => {
   return (
     <SafeAreaView style={style.safeArea}>
-      <StatusBar style={style.statusBar}></StatusBar>
+      <StatusBar></StatusBar>
       <View style={style.appContainer}>
         <Navigation></Navigation>
-        <View style={style.contentContainer}>
-          <ListOfDuty></ListOfDuty>
-        </View>
+        <View style={style.contentContainer}>{children}</View>
         <View style={style.mainActionContainer}>
           <NuovaTaskButton></NuovaTaskButton>
         </View>
@@ -24,9 +22,6 @@ const App = () => {
 const style = StyleSheet.create({
   safeArea: {
     backgroundColor: "#000",
-  },
-  statusBar: {
-    color: "#fff",
   },
   appContainer: {
     display: "flex",
@@ -47,4 +42,4 @@ const style = StyleSheet.create({
   },
 });
 
-export default App;
+export default BasePageLayout;
