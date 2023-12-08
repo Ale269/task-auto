@@ -6,7 +6,7 @@ const NuovaTaskButton = () => {
   return (
     <View style={style.buttonRowContainer}>
       <TouchableOpacity style={style.buttonTextIconContainer}>
-        <FontAwesome name={"plus"} size="16" color="#D103C6" />
+        <FontAwesome name={"plus"} fontSize="16" color="#D103C6" />
         <Text style={style.textElement}>Nuova task</Text>
       </TouchableOpacity>
     </View>
